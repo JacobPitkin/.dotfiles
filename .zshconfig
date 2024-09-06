@@ -1,0 +1,14 @@
+alias test="echo testing from GNU Stow"
+
+alias cd="z"
+alias la="ls -la"
+
+eval "$(starship init zsh)"
+eval "$(zoxide init zsh)"
+source <(fzf --zsh)
+
+source ~/.config/zsh-extras/syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.config/zsh-extras/autosuggestions/zsh-autosuggestions.zsh
+
+export SDKMAN_DIR="$HOME/.config/sdkman"
+[[ -s "$HOME/.config/sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.config/sdkman/bin/sdkman-init.sh"
