@@ -7,18 +7,19 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
 	case $ID in
 		arch)
 			curl -sS https://starship.rs/install.sh | sh
-			sudo pacman -S zoxide fzf bat tree
+			sudo pacman -S stow zoxide fzf bat tree
 			;;
 
 		*)
 			curl -sS https://starship.rs/install.sh | sh
-			sudo apt install zoxide fzf bat tree
+			sudo apt install stow zoxide fzf bat tree
 			;;
 	esac
 elif [[ "$OSTYPE" == "darwin"* ]]; then
 	curl -sS https://starship.rs/install/sh | sh
 	brew install --cask font-meslo-lg-nerd-font
-	brew install zoxide\
+	brew install stow\
+	zoxide\
 	fzf\
 	bat\
 	tree
