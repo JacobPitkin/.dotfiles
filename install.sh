@@ -1,5 +1,4 @@
 #!/bin/sh
-# TODO: Commands for installing meslo font on linux
 
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
 	. /etc/os-release
@@ -16,9 +15,10 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
 			;;
 	esac
 elif [[ "$OSTYPE" == "darwin"* ]]; then
-	sudo curl -sS https://starship.rs/install/sh | sh
+	brew install --cask alacritty
 	brew install --cask font-meslo-lg-nerd-font
-	brew install stow\
+	brew install starship\
+	stow\
 	zoxide\
 	fzf\
 	bat\
