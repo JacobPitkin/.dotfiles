@@ -6,17 +6,17 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
 	
 	case $ID in
 		arch)
-			curl -sS https://starship.rs/install.sh | sh
+			sudo curl -sS https://starship.rs/install.sh | sh
 			sudo pacman -S stow zoxide fzf bat tree
 			;;
 
 		*)
-			curl -sS https://starship.rs/install.sh | sh
+			sudo curl -sS https://starship.rs/install.sh | sh
 			sudo apt install stow zoxide fzf bat tree
 			;;
 	esac
 elif [[ "$OSTYPE" == "darwin"* ]]; then
-	curl -sS https://starship.rs/install/sh | sh
+	sudo curl -sS https://starship.rs/install/sh | sh
 	brew install --cask font-meslo-lg-nerd-font
 	brew install stow\
 	zoxide\
