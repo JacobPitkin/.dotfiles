@@ -10,7 +10,7 @@ source ~/.config/zsh-extras/autosuggestions/zsh-autosuggestions.zsh
 export SDKMAN_DIR="$HOME/.config/sdkman"
 [[ -s "$HOME/.config/sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.config/sdkman/bin/sdkman-init.sh"
 
-if command -v z
+if command -v z &> /dev/null
 then
 	alias cd="z"
 fi
